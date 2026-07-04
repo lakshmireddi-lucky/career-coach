@@ -15,19 +15,14 @@ Welcome to **careercoach.ai**, your AI-powered personalized career guide. This a
 
 ---
 
-## 🛠️ How to Run the Project Locally
+## 🛠️ Complete Installation Steps
 
-If you want to run this application on your own computer, follow these step-by-step instructions:
+Follow these exact steps to download and run this application on your local machine:
 
-### Prerequisites
-Make sure you have **Python 3.11+** installed on your machine.
+### 1. Download the Project Files
+Click the green **"Code"** button at the top of this GitHub repository page, select **"Download ZIP"**, and extract the folder to your computer (for example, into your `Documents` folder).
 
-### Installation Steps
-
-1. **Clone or Download the Code:**
-   Download the `app.py` and `requirements.txt` files into your `Documents` folder.
-
-2. **Open Your Terminal:**
-   Open Command Prompt (Windows) or Terminal (Mac) and navigate to the folder where you saved the files:
-   ```bash
-   cd Documents
+### 2. Open Your Terminal
+Open Command Prompt (Windows) or Terminal (Mac) and navigate into the project directory where you extracted the files:
+```bash
+cd Documents/career-coach
