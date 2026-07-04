@@ -31,17 +31,23 @@ if "message_count" not in st.session_state:
     st.session_state.message_count = 0
 if "is_premium" not in st.session_state:
     st.session_state.is_premium = False
+#speech-to-text feature
+import os
+from gtts import gTTS
 
-# JS injection workaround for browser speech synthesis
-def trigger_tts(text):
-    clean_text = text.replace("'", "\\'").replace("\n", " ")
-    js = f"""
-    <script>
-        var msg = new SpeechSynthesisUtterance('{clean_text}');
-        window.speechSynthesis.speak(msg);
-    </script>
-    """
-    st.components.v1.html(js, height=0, width=0)
+def trigger_tts_python(text):
+    try:
+        # Convert text to speech and save it as a temporary mp3 file
+        tts = gTTS(text=text, lang='en')
+        tts.save("speech.mp3")
+        
+        # Display the audio player on the screen and autoplay it
+        st.audio("speech.mp3", format="audio/mp3", autoplay=True)
+        
+        # Optional: clean up the file afterwards so it doesn't clutter your folder
+        # os.remove("speech.mp3")
+    except Exception as e:
+        st.error("Audio engine failed to load.")
 
 # sidebar layout
 with st.sidebar:
