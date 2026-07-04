@@ -24,5 +24,18 @@ Click the green **"Code"** button at the top of this GitHub repository page, sel
 
 ### 2. Open Your Terminal
 Open Command Prompt (Windows) or Terminal (Mac) and navigate into the project directory where you extracted the files:
+
+### 3. Install Required Libraries
+Run the following command to force-install all necessary dependencies cleanly so your local environment matches the development setup:
+
+pip install google-genai PyPDF2 streamlit
+
+### 4. Launch the Application
+Start the local web server using Streamlit:
+
+streamlit run app.py
+
+### 5. Access the Interface
+Your default web browser will automatically open a new tab at http://localhost:8501 displaying your running app!
 ```bash
 cd Documents/career-coach
