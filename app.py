@@ -19,7 +19,7 @@ with st.expander("📖 How to Use careercoach.ai (Click to Expand)", expanded=Tr
     """)
 
 # safety caps
-MAX_PDF_PAGES = 5
+MAX_PDF_PAGES = 10
 FREE_LIMIT = 3
 
 # init session state stuff so we dont lose data on page reload
